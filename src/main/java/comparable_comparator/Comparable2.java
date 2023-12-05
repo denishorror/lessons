@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static java.lang.System.out;
-
-public class Comparable_2 {
+public class Comparable2 {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
         Employee emp1 = new Employee(1, "Денис", "Кагане", 220000);
@@ -16,13 +14,13 @@ public class Comparable_2 {
         list.add(emp2);
         list.add(emp3);
 
-        out.println("Перед сортировкой");
-        out.println(list);
+        System.out.println("Перед сортировкой");
+        System.out.println(list);
 
         Collections.sort(list);
 
-        out.println("После сортировки");
-        out.println(list);
+        System.out.println("После сортировки");
+        System.out.println(list);
     }
 
     static class Employee implements Comparable<Employee> {
