@@ -1,10 +1,12 @@
 package multithread;
 
-public class Synchronisation {
+public class SynchronizedBlock2 {
     static int counter = 0;
 
-    public static synchronized void increment() {
-        counter++;
+    public static void increment() {
+        synchronized (SynchronizedBlock2.class) {
+            counter++;
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -19,12 +21,12 @@ public class Synchronisation {
     }
 }
 
-class R implements Runnable {
+class R2 implements Runnable {
 
     @Override
     public void run() {
         for (int i = 0; i < 1000; i++) {
-            Synchronisation.increment();
+            SynchronizedBlock2.increment();
         }
     }
 }
