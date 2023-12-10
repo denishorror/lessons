@@ -1,6 +1,7 @@
 package generics;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class WildCard {
@@ -33,7 +34,7 @@ public class WildCard {
         ald.add(3.16);
         System.out.println(summ(ald));
 
-        ArrayList<Integer> ali = new ArrayList<>();
+        LinkedList<Integer> ali = new LinkedList<>();
         ali.add(3);
         ali.add(35);
         ali.add(30);
@@ -48,7 +49,7 @@ public class WildCard {
         System.out.println("Мой LIST содержит следующие элементы: " + list);
     }
 
-    public static double summ(ArrayList<? extends Number> al){
+    public static double summ(List<? extends Number> al){
         double summ = 0;
         for (Number n : al) {
             summ += n.doubleValue();
