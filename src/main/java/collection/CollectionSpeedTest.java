@@ -46,24 +46,24 @@ public class CollectionSpeedTest {
         linkedList.set(0, 222);
 
         //ArrayList
-        CompareTime.compareTime(index, arrayList, "ArrayList");
+        CompareCollectionsSpeed.compareTimeOfRemove(index, arrayList, "ArrayList");
 
         System.out.println("\n---------------------------------");
 
         //LinkedList
-        CompareTime.compareTime(index, linkedList, "LinkedList");
+        CompareCollectionsSpeed.compareTimeOfRemove(index, linkedList, "LinkedList");
 
 //        Files.delete(Path.of(PATH));
     }
 }
 
-class CompareTime {
-    public static void compareTime(int index, List<?> list, String comment) {
+class CompareCollectionsSpeed {
+    public static void compareTimeOfRemove(int index, List<?> list, String comment) {
         long startTime;
         long endTime;
 
 //        System.out.println(list.get(index));
-        System.out.println("Проверка коллекции: " + list.get(0));
+        System.out.println("\nПроверка коллекции: " + list.get(0));
 
         startTime = System.currentTimeMillis();
         list.remove(index);
