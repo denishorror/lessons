@@ -20,6 +20,16 @@ public class LinkedListExample {
         linkedList.add(student5);
 
         System.out.println("LinkedList = " + linkedList);
+        System.out.println(linkedList.get(2));
+
+        Student2 student6 = new Student2("Денис", 3);
+        Student2 student7 = new Student2("Игорь", 4);
+        linkedList.add(student6);
+        System.out.println("LinkedList = " + linkedList);
+        linkedList.add(1, student7);
+        System.out.println("LinkedList = " + linkedList);
+        linkedList.remove(3);
+        System.out.println("LinkedList = " + linkedList);
     }
 }
 
@@ -30,7 +40,7 @@ class Student2 {
 
     @Override
     public String toString() {
-        return "\nСтудент{" +
+        return "\nСтудент {" +
                 "name = '" + name + "\'" +
                 ", course = " + course +
                 "}";
