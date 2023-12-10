@@ -62,8 +62,8 @@ class CompareCollectionsSpeed {
         long startTime;
         long endTime;
 
-//        System.out.println(list.get(index));
         System.out.println("\nПроверка коллекции: " + list.get(0));
+        System.out.println("Проверка индекса: " + list.get(index));
 
         startTime = System.currentTimeMillis();
         list.remove(index);
@@ -71,6 +71,6 @@ class CompareCollectionsSpeed {
 
         System.out.println(comment);
         System.out.println("Время исполнения: " + (endTime - startTime));
-//        System.out.println(list.get(index));
+        System.out.println("Проверка индекса: " + list.get(index));
     }
 }
