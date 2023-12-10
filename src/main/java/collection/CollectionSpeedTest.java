@@ -13,7 +13,7 @@ public class CollectionSpeedTest {
 
         long endTime;
         long startTime;
-        int index = 10000000;
+        int index = 10;
         int maxSize = 20000000;
 
 //        File file = new File(PATH);
@@ -46,19 +46,19 @@ public class CollectionSpeedTest {
         linkedList.set(0, 222);
 
         //ArrayList
-        CompareCollectionsSpeed.compareTimeOfRemove(index, arrayList, "ArrayList");
+        TestCollectionsSpeed.compareTimeOfRemove(index, arrayList, "ArrayList");
 
         System.out.println("\n---------------------------------");
 
         //LinkedList
-        CompareCollectionsSpeed.compareTimeOfRemove(index, linkedList, "LinkedList");
+        TestCollectionsSpeed.compareTimeOfRemove(index, linkedList, "LinkedList");
 
 //        Files.delete(Path.of(PATH));
     }
 }
 
-class CompareCollectionsSpeed {
-    public static void compareTimeOfRemove(int index, List<?> list, String comment) {
+class TestCollectionsSpeed {
+    public static long compareTimeOfRemove(int index, List<?> list, String comment) {
         long startTime;
         long endTime;
 
@@ -70,7 +70,10 @@ class CompareCollectionsSpeed {
         endTime = System.currentTimeMillis();
 
         System.out.println(comment);
-        System.out.println("Время исполнения: " + (endTime - startTime));
+        long diff = endTime - startTime;
+        System.out.println("> Время исполнения: " + diff);
         System.out.println("Проверка индекса: " + list.get(index));
+
+        return diff;
     }
 }
