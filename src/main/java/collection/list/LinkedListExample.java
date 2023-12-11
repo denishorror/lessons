@@ -1,4 +1,4 @@
-package collection;
+package collection.list;
 
 import lombok.AllArgsConstructor;
 
