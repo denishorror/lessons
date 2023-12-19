@@ -15,7 +15,7 @@ public class HashCodeImmutableExample {
         System.out.println(map);
         System.out.println(map.containsKey(student1));
         System.out.println(student1.hashCode());
-        student1.course = 4;
+//        student1.course = 4;
         System.out.println(student1.hashCode());
         System.out.println(map.containsKey(student1));
 
