@@ -3,7 +3,7 @@ package collection.map;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashCodeExample {
+public class HashCodeImmutableExample {
     public static void main(String[] args) {
         Map<Student, Double> map = new HashMap<>();
         Student student1 = new Student(" Денис", "Кагане", 3);
@@ -13,20 +13,11 @@ public class HashCodeExample {
         map.put(student2, 8.7);
         map.put(student3, 9.2);
         System.out.println(map);
-
-        Student student4 = new Student(" Денис", "Кагане", 3);
-        Student student5 = new Student(" Игорь", "Сидоров", 4);
-        boolean result = map.containsKey(student4);
-        System.out.println(result);
-        System.out.println(student1.equals(student4));
-
+        System.out.println(map.containsKey(student1));
         System.out.println(student1.hashCode());
-        System.out.println(student4.hashCode());
-        System.out.println(student5.hashCode());
+        student1.course = 4;
+        System.out.println(student1.hashCode());
+        System.out.println(map.containsKey(student1));
 
-
-        for(Map.Entry<Student, Double> entry: map.entrySet()) {
-            System.out.println(entry.getKey() + ":" + entry.getValue());
-        }
     }
 }

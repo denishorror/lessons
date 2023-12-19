@@ -29,5 +29,7 @@ public class HashMapExample1 {
 
         System.out.println(map1.keySet());
         System.out.println(map1.values());
+
+
     }
 }

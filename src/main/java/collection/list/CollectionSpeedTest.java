@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CollectionSpeedTest {
@@ -35,7 +36,7 @@ public class CollectionSpeedTest {
             e.printStackTrace();
         }
 
-        List<Integer> linkedList = new ArrayList<>();
+        List<Integer> linkedList = new LinkedList<>();
         List<Integer> arrayList = new ArrayList<>();
         for (String s : list) {
             arrayList.add(Integer.valueOf(s));
@@ -52,7 +53,7 @@ public class CollectionSpeedTest {
         //LinkedList
         TestCollectionsSpeed.compareTimeOfRemove(index, linkedList, "LinkedList");
 
-        Files.delete(Path.of(PATH_TO_INPUT_FILE));
+//        Files.delete(Path.of(PATH_TO_INPUT_FILE));
     }
 }
 
@@ -61,8 +62,8 @@ class TestCollectionsSpeed {
         long startTime;
         long endTime;
 
-        System.out.println("\nПроверка коллекции: " + list.get(0));
-        System.out.println("Проверка индекса: " + list.get(index));
+//        System.out.println("\nПроверка коллекции: " + list.get(0));
+//        System.out.println("Проверка индекса: " + list.get(index));
 
         startTime = System.currentTimeMillis();
         list.remove(index);
@@ -71,7 +72,7 @@ class TestCollectionsSpeed {
         System.out.println(comment);
         long diff = endTime - startTime;
         System.out.println(String.format("> Время исполнения: %s мс", diff));
-        System.out.println("Проверка индекса: " + list.get(index));
+//        System.out.println("Проверка индекса: " + list.get(index));
 
         return diff;
     }

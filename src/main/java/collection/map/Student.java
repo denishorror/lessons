@@ -28,7 +28,7 @@ public class Student {
                 '}';
     }
 
-    String name;
-    String surname;
-    int course;
+    final String name;
+    final String surname;
+    final int course;
 }
