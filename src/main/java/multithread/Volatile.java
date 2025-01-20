@@ -23,3 +23,4 @@ public class Volatile extends Thread {
         out.println("End of program!");
     }
 }
+
