@@ -1,8 +1,6 @@
 package collection.list;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -58,7 +56,7 @@ public class CollectionSpeedTest {
 }
 
 class TestCollectionsSpeed {
-    public static long compareTimeOfRemove(int index, List<?> list, String comment) {
+    public static void compareTimeOfRemove(int index, List<?> list, String comment) {
         long startTime;
         long endTime;
 
@@ -71,9 +69,8 @@ class TestCollectionsSpeed {
 
         System.out.println(comment);
         long diff = endTime - startTime;
-        System.out.println(String.format("> Время исполнения: %s мс", diff));
+        System.out.printf("> Время исполнения: %s мс%n", diff);
 //        System.out.println("Проверка индекса: " + list.get(index));
 
-        return diff;
     }
 }
